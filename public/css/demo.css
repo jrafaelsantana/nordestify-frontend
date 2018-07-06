@@ -1,0 +1,58 @@
+.page-header.page-header-small{
+  height: 20vh;
+}
+.profile-page .page-header{
+  min-height: 300px;
+}
+.btnConf{
+    background: none !important;
+}
+
+/* Dashboard */
+.formSearchUser{
+    margin-bottom: 0 !important;
+}
+.formSearchUser input{
+    background-color: rgba(0, 0, 0, .2) !important;
+    color: #fff;
+    border-color: 0 !important;
+}
+.formSearchUser .input-group-addon{
+    background-color: rgba(0, 0, 0, .2) !important;
+    color: #fff;
+    border-color: 0 !important;
+}
+.formSearchUser .form-control:focus{
+    color: #fff;
+}
+.form-search{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.inputSearch {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    font-size: 25px;
+    margin-top: auto;
+    padding: 5px;
+}
+.inputSearch :focus{
+    background: transparent !important;
+}
+
+.dashboard table{
+    margin-top: 30px;
+}
+.dashboard .table td, .table th {
+    border: 0;
+}
+
+.dashboard tr:hover {
+    background-color: rgba(0, 0, 0, .2) !important;
+}
