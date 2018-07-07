@@ -1,11 +1,8 @@
 .page-header.page-header-small{
-  height: 20vh;
+    height: 20vh;
 }
 .profile-page .page-header{
-  min-height: 300px;
-}
-.btnConf{
-    background: none !important;
+    min-height: 300px;
 }
 
 /* Dashboard */
@@ -25,6 +22,24 @@
 .formSearchUser .form-control:focus{
     color: #fff;
 }
+
+.dashboard table{
+    margin-top: 30px;
+}
+.dashboard .table td, .table th {
+    border: 0;
+}
+
+.dashboard tr:hover {
+    background-color: rgba(0, 0, 0, .2) !important;
+}
+
+.btnConf{
+    background: none;
+}
+.invisivel{display: none;}
+
+/* Dashboard - Pesquisa de Música */
 .form-search{
     display: flex;
     flex-direction: column;
@@ -36,23 +51,46 @@
     border-radius: 0;
     background: transparent;
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, .6);
     width: 100%;
     font-size: 25px;
+    text-align: right;
     margin-top: auto;
     padding: 5px;
 }
 .inputSearch :focus{
+    border-bottom: 2px solid #fff !important;
     background: transparent !important;
 }
-
-.dashboard table{
-    margin-top: 30px;
-}
-.dashboard .table td, .table th {
+.tabela-pesquisa td{
     border: 0;
+    vertical-align: middle;
+}
+.capaPesquisa {
+    width: 80px;
+    height: auto;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
+    -moz-box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
+    box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
 }
 
-.dashboard tr:hover {
-    background-color: rgba(0, 0, 0, .2) !important;
+.btnLike{
+    color: #1db954;
+    margin-right: 10px;
+}
+.btnLike :focus{
+    color: #1db954;
+}
+.btnLike :hover{
+    color: #1db954;
+}
+.btnDislike{
+    color: #f03434;
+}
+.btnDislike :focus{
+    color: #f03434;
+}
+.btnDislike :hover{
+    color: #f03434;
 }

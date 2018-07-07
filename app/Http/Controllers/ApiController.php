@@ -46,4 +46,24 @@ class ApiController extends Controller
             return response()->json(['status' => 'not found']);
         }
     }
+
+    public function search($termo = null){
+        $termoItens = str_replace('-',' ',$termo);
+        $ids = Music::search($termoItens)->limit(5)->get();
+        $resultado = [];
+
+        foreach ($ids as $id){
+            $musica = Music::find($id->id);
+            $artista = $musica->artist;
+            $genero = $musica->genre;
+
+            array_push($resultado, $musica);
+        }
+
+        if(count($ids) > 0 || count($resultado) > 0){
+            return response()->json($resultado);
+        }else{
+            return response()->json([]);
+        }
+    }
 }
