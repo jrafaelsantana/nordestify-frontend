@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="content-center">
                     <form>
-                        <input type="text" placeholder="Procurar uma música..." class="inputSearch" id="pesquisaMusica" autocomplete="false">
+                        <input type="text" placeholder="Procurar uma música..." class="inputSearch" id="pesquisaMusica" autocomplete="off">
                     </form>
                 </div>
             </div>

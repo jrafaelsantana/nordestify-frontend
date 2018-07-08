@@ -65,6 +65,7 @@
 .tabela-pesquisa td{
     border: 0;
     vertical-align: middle;
+    text-align: center;
 }
 .capaPesquisa {
     width: 80px;
@@ -73,6 +74,11 @@
     -webkit-box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
     -moz-box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
     box-shadow: 2px 2px 19px 0px rgba(179,179,179,1);
+}
+
+#resultadoTabela button{
+    border: 0;
+    background: none;
 }
 
 .btnLike{
