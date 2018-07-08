@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Music;
+use App\Review;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
@@ -15,7 +18,19 @@ class UserController extends Controller
     }
 
     public function profile(){
-        return view('profile', array('user' => Auth::user()));
+        $usuario = User::find(Auth::id());
+        $userReviews = $usuario->reviews;
+
+        $reviews = [];
+        foreach ($userReviews as $userReview){
+            $musica = Music::find($userReview->music_id);
+            $artista = $musica->artist;
+            $musica->review = $userReview->review;
+            $musica->dataReview = $userReview->updated_at;
+            array_push($reviews, $musica);
+        }
+
+        return view('profile', array('user' => Auth::user(), 'reviews' => $reviews));
     }
 
     public function update_profile(Request $request){

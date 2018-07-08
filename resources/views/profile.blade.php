@@ -85,37 +85,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto">
-                        <h4 class="title text-center">Últimas Avaliações</h4>
+                        @if(count($reviews) > 0)
+                            <h4 class="title text-center">Avaliações <span class="badge badge-success" id="countResult">{{ count($reviews) }}</span></h4>
+                        @else
+                            <h4 class="title text-center">Nenhuma Avaliação Encontrada!</h4>
+                        @endif
                     </div>
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <table class="table table-hover">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                            </thead>
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <table class="table table-hover tabela-pesquisa">
                             <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            @foreach($reviews as $review)
+                                <tr>
+                                    <th scope="row"><img src="img/albuns/{{ $review->artist->photo }}" class="capaPesquisa"></th>
+                                    <td>{{ $review->name }}</td>
+                                    <td>{{ $review->artist->name }}</td>
+                                    <td>{{ date_format($review->dataReview, 'd/m/Y H:i:s') }}</td>
+                                    @if($review->review == 1)
+                                        <td width="20%"><i class="fa fa-thumbs-up fa-2x btnLike"></i></td>
+                                    @elseif($review->review == -1)
+                                        <td width="20%"><i class="fa fa-thumbs-down fa-2x btnDislike"></i></td>
+                                    @endif
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
