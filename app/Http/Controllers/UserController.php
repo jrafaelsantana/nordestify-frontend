@@ -33,6 +33,10 @@ class UserController extends Controller
         return view('profile', array('user' => Auth::user(), 'reviews' => $reviews));
     }
 
+    public function musics(){
+        return view('musics', array('user' => Auth::user()));
+    }
+
     public function update_profile(Request $request){
         try{
             $user = Auth::user();

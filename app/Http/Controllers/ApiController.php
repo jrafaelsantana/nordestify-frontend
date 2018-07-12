@@ -112,4 +112,25 @@ class ApiController extends Controller
             return response()->json([$e]);
         }
     }
+
+    public function getAllMusics(){
+        $musicas = Music::with(['artist', 'genre'])->get();
+
+        $userinfo = User::find(Auth::id());
+        $reviews = $userinfo->reviews;
+
+        foreach ($reviews as $review){
+            foreach ($musicas as $musica){
+                if($review->music_id == $musica->id){
+                    $musica->review = $review->review;
+                }
+            }
+        }
+
+        if(count($musicas) > 0 ){
+            return response()->json($musicas);
+        }else{
+            return response()->json([]);
+        }
+    }
 }

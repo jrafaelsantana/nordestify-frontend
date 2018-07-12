@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<body class="profile-page">
+    <body class="profile-page">
     <!-- Navbar -->
+    <div id="loading-image" class="loading"></div>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="20">
         <div class="container">
             <div class="navbar-translate">
@@ -13,10 +14,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="{{ asset('img/blurred-image-1.jpg') }}">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Meu Perfil</a>
+                        <a class="nav-link" href="{{ route('home') }}">Avaliar Músicas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('musics') }}">Todas as Músicas</a>
+                        <a class="nav-link" href="{{ route('profile') }}">Meu Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"
@@ -37,18 +38,13 @@
             </div>
             <div class="container">
                 <div class="content-center">
-                    <form>
-                        <input type="text" placeholder="Procurar uma música..." class="inputSearch" id="pesquisaMusica" autocomplete="off">
-                    </form>
+                    <h1>Todas as Músicas</h1>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 ml-auto mr-auto">
-                        <h4 class="title text-center">Resultados da Pesquisa <span class="badge badge-success" id="countResult">3</span></h4>
-                    </div>
                     <div class="col-md-10 ml-auto mr-auto">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -64,9 +60,9 @@
             </div>
         </div>
     </div>
-</body>
+    </body>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/search.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/allMusics.js') }}" type="text/javascript"></script>
 @endsection

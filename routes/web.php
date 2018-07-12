@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_profile')->name('updateProfile');
+Route::get('musics', 'UserController@musics')->name('musics');
 
 Route::get('user/{id}', 'UserController@getProfile')->name('user');
 
@@ -31,5 +32,6 @@ Route::get('api/musics', 'ApiController@getMusicsList')->name('apiMusicas');
 Route::get('api/musics/{id}', 'ApiController@getMusicInfo')->name('apiMusica');
 
 Route::get('api/musics/search/{termo}', 'ApiController@search')->name('apiSearch');
+Route::get('api/allmusics', 'ApiController@getAllMusics')->name('apiAllMusics');
 
 Route::get('api/musics/reviews/{avaliacao}/{musica}', 'ApiController@setReview')->name('apiReview');
