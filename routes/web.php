@@ -19,6 +19,7 @@ Route::get('home', 'HomeController@index')->name('home');
 Route::get('profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_profile')->name('updateProfile');
 Route::get('musics', 'UserController@musics')->name('musics');
+Route::get('results', 'UserController@getResultados')->name('results');
 
 Route::get('user/{id}', 'UserController@getProfile')->name('user');
 

@@ -56,8 +56,8 @@ class UserController extends Controller
         }
     }
 
-    public function getProfile($id){
-        //TODO: Capturar id e retornar perfil do usuário
+    public function getResultados(){
+        return view('results', array('user' => Auth::user()));
     }
 
 }
