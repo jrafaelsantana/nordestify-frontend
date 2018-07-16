@@ -22,7 +22,6 @@ $(document).ready(function()
                         '    <img class="card-img-top" src="uploads/avatars/' + value.avatar + '" alt="Card image cap">\n' +
                         '    <div class="card-body">\n' +
                         '        <h5 class="card-title align-center">'+value.name+'</h5>\n' +
-                        '        <p class="card-text align-center">' + value.score + '</p>\n' +
                         '    </div>\n' +
                         '</div>';
                 });
@@ -53,7 +52,6 @@ $(document).ready(function()
                         '    <div class="card-body">\n' +
                         '        <h5 class="card-title align-center">' + value.name + '</h5>\n' +
                         '        <p class="card-text align-center">' + value.artist + '</p>\n' +
-                        '        <p class="card-text align-center">' + value.score + '</p>\n' +
                         '    </div>\n' +
                         '</div>'
                 });
