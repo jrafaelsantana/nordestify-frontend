@@ -13,13 +13,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="{{ asset('img/blurred-image-1.jpg') }}">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Meu Perfil</a>
+                        <a class="nav-link" href="{{ route('home') }}">Avaliar Músicas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('results') }}">Ver Recomendações</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('musics') }}">Todas as Músicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('profile') }}">Meu Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"

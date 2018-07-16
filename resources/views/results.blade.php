@@ -18,7 +18,13 @@
                         <a class="nav-link" href="{{ route('home') }}">Avaliar Músicas</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('results') }}">Ver Recomendações</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('musics') }}">Todas as Músicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('profile') }}">Meu Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"
