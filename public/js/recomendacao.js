@@ -4,7 +4,7 @@ $(document).ready(function()
 
     //Usuários semelhantes
     $.ajax({
-        url: "http://localhost:8000/userNeighbors/" + userId,
+        url: "http://nordestifyrecomendacao.southcentralus.cloudapp.azure.com/userNeighbors/" + userId,
         type: "GET",
         crossDomain: true,
         dataType:"json",
@@ -33,7 +33,7 @@ $(document).ready(function()
 
     //Musicas Semelhantes
     $.ajax({
-        url: "http://localhost:8000/musicsRecommendation/" + userId,
+        url: "http://nordestifyrecomendacao.southcentralus.cloudapp.azure.com/musicsRecommendation/" + userId,
         type: "GET",
         crossDomain: true,
         dataType:"json",
